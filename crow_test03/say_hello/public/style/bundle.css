@@ -1,0 +1,16 @@
+main.svelte-1ihy6zb{text-align:center;padding:1em;max-width:240px;margin:10% auto;display:flex;flex-direction:column;justify-content:center;align-items:center}h1.svelte-1ihy6zb{color:rgb(179, 238, 90);text-transform:uppercase;font-size:4em;font-weight:bolder}body{background:linear-gradient(
+      264.51deg,
+      rgb(109, 85, 0) 4.38%,
+      rgb(111, 0, 0) 11.51%,
+      rgb(112, 0, 0) 25.06%,
+      rgb(118, 3, 69) 36.04%,
+      rgb(34, 39, 41) 47.63%,
+      rgb(38, 0, 113) 59.03%,
+      rgb(7, 148, 141) 69.96%,
+      rgb(31, 147, 69) 83.74%,
+      rgb(0, 73, 22) 95.62%
+    );background-position:58% 50%;background-size:500%;animation:svelte-1ihy6zb-changeBackground 35s forwards ease}@media(min-width: 640px){main.svelte-1ihy6zb{max-width:none}}@keyframes svelte-1ihy6zb-changeBackground{0%{background-position:22% 0%}100%{background-position:100% 54%}}
+div.about__section.svelte-1ufqwym{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:justify;color:whitesmoke}
+div.main__container.svelte-ugdbgp.svelte-ugdbgp{display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}h3.main__heading.svelte-ugdbgp.svelte-ugdbgp{color:azure}a.svelte-ugdbgp>button.svelte-ugdbgp{border-radius:1rem;padding:1rem;background:linear-gradient(to right, #134124bd 25%, #23241479 75%);color:whitesmoke;font:1.25rem bolder;outline:none;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)}button.svelte-ugdbgp.svelte-ugdbgp:hover{transform:scale(1.2) translateY(-0.2rem)}button.svelte-ugdbgp.svelte-ugdbgp:active{transform:scale(0.4) translateY(0.2rem)}
+
+/*# sourceMappingURL=bundle.css.map */
