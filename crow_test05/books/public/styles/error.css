@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+body
+{
+  font-family: arial;
+}
+
+header
+{
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+header ul
+{
+  padding: 10px;
+}
+
+header ul li
+{
+  display: inline;
+  padding: 0px 10px;
+}
+
+header ul li a
+{
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.content
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.content h2
+{
+  padding: 30px 0px 0px 0px;
+}
+
+.content h3
+{
+  padding: 30px 0px 0px 0px;
+}
+
+.content h5
+{
+  padding: 30px 0px 0px 0px;
+}
+
+.content h5 a
+{
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.content #go-back
+{
+  margin: 30px 0px 1px 0px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid;
+  cursor: pointer;
+} 
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+}
+
+footer p
+{
+  padding: 10px 0px;
+  color: #ddd;
+}
+
+footer p a
+{
+  text-decoration: none;
+  color: #eee;
+  cursor: pointer;
+}
+
+footer p a:hover
+{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}

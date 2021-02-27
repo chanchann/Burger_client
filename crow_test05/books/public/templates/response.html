@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Best Selling Books</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/response.css">
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-this-website">About This Website</a></li>
+      <li><a href="/about-the-developer">About The Developer</a></li>
+      <li><a href="contact-the-developer">Contact The Developer</a></li>
+    </ul>
+  </header>
+  <section class="section">
+    <div class="content">
+      {{#list_info}}
+      <h4 class="title">Best Selling Books in {{list_name}} this week</h4>
+      {{/list_info}}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Weeks On List</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#books}}
+          <tr>
+            <td>{{rank}}</td>
+            <td>{{title}}</td>
+            <td>{{author}}</td>
+            <td>{{weeks_on_list}}</td>
+            <td><a href="{{amazon_product_url}}" target="_blank">Amazon</td>
+          </tr>
+          {{/books}}
+        </tbody>
+      </table>
+      <a href="/"><button id="go-back" >Go back</button></a>
+    </div>
+  </section>
+  <footer>
+    <p>Made with &#10084;&#65039; by <a href="/about-the-developer">Yassine BOUGAYEZ</a></p>
+  </footer>
+</body>
+</html>
