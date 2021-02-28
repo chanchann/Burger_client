@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue basic</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="toggle show" @click="toggleIsShow">
+        <!-- f12查看区别 -->
+        <!-- 频繁操作用v-show -->
+        <p v-if="isShow">v - if</p>    
+        <p v-show="isShow">v - show</p>   
+        <h2 v-if="temperature >= 35"> hot hot!!! </h2>
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                isShow: false,
+                temperature: 50  
+            },
+            methods:{
+                toggleIsShow:function() {
+                    this.isShow = !this.isShow;
+                },
+            }
+        })
+    </script>
+</body>
+</html>

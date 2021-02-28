@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue basic</title>
+    <style>
+        .active{
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="add data" @click="add">
+        <input type="button" value="remove adata" @click="remove">
+        <ul>
+            <li v-for="item in arr">
+                city : {{ item }}
+            </li>
+            <br>
+            <li v-for="(it,index) in arr">
+                {{ index + 1 }} city {{ it }}
+            </li>
+        </ul>
+        <h2 v-for="item in vegetables" :title="item.name">
+            {{ item.name }}
+        </h2>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                arr:['bj', 'sh', 'gz', 'sz'],
+                vegetables:[
+                    {"name" : "egg" },
+                    {"name" : "flower"}
+                ]
+            },
+            methods: {
+                add: function() {
+                    this.vegetables.push({ name: "egg flower" });
+                },
+                remove: function() {
+                    // 移除最左边
+                    this.vegetables.shift();  
+                }
+            }
+        })
+    </script>
+</body>
+</html>

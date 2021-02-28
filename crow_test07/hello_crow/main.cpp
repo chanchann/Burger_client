@@ -1,28 +1,10 @@
 #include "crow_all.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <vector>
 #include <cstdlib>
 #include <boost/filesystem.hpp>
-
-#include <bsoncxx/builder/stream/document.hpp>
-#include <bsoncxx/json.hpp>
-#include <bsoncxx/oid.hpp>
-
-#include <mongocxx/client.hpp>
-#include <mongocxx/stdx.hpp>
-#include <mongocxx/uri.hpp>
-#include <mongocxx/instance.hpp>
-
-using bsoncxx::builder::stream::close_array;
-using bsoncxx::builder::stream::close_document;
-using bsoncxx::builder::stream::document;
-using bsoncxx::builder::stream::finalize;
-using bsoncxx::builder::stream::open_array;
-using bsoncxx::builder::stream::open_document;
-using bsoncxx::builder::basic::kvp;
-using bsoncxx::builder::basic::make_document;
-using mongocxx::cursor;
 
 using namespace std;
 using namespace crow;
@@ -67,10 +49,11 @@ int main(int argc, char* argv[]) {
   crow::SimpleApp app;
   set_base(".");
 
-  mongocxx::instance inst{};
-  string mongoConnect = std::string(getenv("MONGODB_URI"));
-  mongocxx::client conn{mongocxx::uri{mongoConnect}};
-  auto collection = conn["heroku_db_connect"]["contacts"];
+  // mongocxx::instance inst{};
+  // string mongoConnect = std::string(getenv("MONGODB_URI"));
+  // mongocxx::client conn{mongocxx::uri{mongoConnect}};
+  // auto collection = conn["heroku_db_connect"]["contacts"];
+
 
   CROW_ROUTE(app, "/styles/<string>")
     ([](const request &req, response &res, string filename){

@@ -7,24 +7,24 @@
 #include<unordered_set>
 #include<mutex>
 
-#include <bsoncxx/builder/stream/document.hpp>
-#include <bsoncxx/json.hpp>
-#include <bsoncxx/oid.hpp>
+// #include <bsoncxx/builder/stream/document.hpp>
+// #include <bsoncxx/json.hpp>
+// #include <bsoncxx/oid.hpp>
 
-#include <mongocxx/client.hpp>
-#include <mongocxx/stdx.hpp>
-#include <mongocxx/uri.hpp>
-#include <mongocxx/instance.hpp>
+// #include <mongocxx/client.hpp>
+// #include <mongocxx/stdx.hpp>
+// #include <mongocxx/uri.hpp>
+// #include <mongocxx/instance.hpp>
 
-using bsoncxx::builder::stream::close_array;
-using bsoncxx::builder::stream::close_document;
-using bsoncxx::builder::stream::document;
-using bsoncxx::builder::stream::finalize;
-using bsoncxx::builder::stream::open_array;
-using bsoncxx::builder::stream::open_document;
-using bsoncxx::builder::basic::kvp;
-using bsoncxx::builder::basic::make_document;
-using mongocxx::cursor;
+// // using bsoncxx::builder::stream::close_array;
+// // using bsoncxx::builder::stream::close_document;
+// // using bsoncxx::builder::stream::document;
+// // using bsoncxx::builder::stream::finalize;
+// // using bsoncxx::builder::stream::open_array;
+// // using bsoncxx::builder::stream::open_document;
+// // using bsoncxx::builder::basic::kvp;
+// // using bsoncxx::builder::basic::make_document;
+// // using mongocxx::cursor;
 
 using namespace std;
 using namespace crow;
@@ -84,7 +84,7 @@ int main(int argc, char* argv[]) {
   mongocxx::instance inst{};
   string mongoConnect = std::string("mongodb://mymongodbcpp:0fa5Opk8lQPxmsFvziguqLNALLtIUJxs2IJ91E6ft0fLD7h4iubtWU1usOqOSfHEhxSIEPPv3O25P0kx6RHyzg==@mymongodbcpp.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@mymongodbcpp@");
   mongocxx::client conn{mongocxx::uri{mongoConnect}};
-  //std::cout<<"connet to db"<<std::endl;
+  std::cout<<"connet to db"<<std::endl;
   auto collection = conn["cppdb"]["contacts"];
   
   CROW_ROUTE(app,"/ws")
